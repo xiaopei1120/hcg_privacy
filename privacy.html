@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy · 隐私政策 — DailySave / 每日攒</title>
+  <meta name="description" content="Privacy Policy for DailySave (每日攒).">
+  <style>
+    :root {
+      --bg: #f4f7f4;
+      --card: #ffffff;
+      --ink: #1c2a22;
+      --muted: #5c6b62;
+      --line: #d7e0d8;
+      --accent: #2d6a4f;
+      --accent-soft: #e8f2ec;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      background: rgba(244, 247, 244, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .bar {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .brand { font-weight: 650; color: var(--accent); text-decoration: none; }
+    nav { display: flex; gap: 8px; flex-wrap: wrap; }
+    nav a, nav button {
+      appearance: none;
+      border: 1px solid var(--line);
+      background: var(--card);
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 13px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    nav button[aria-pressed="true"] {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+    main { max-width: 760px; margin: 0 auto; padding: 28px 20px 64px; }
+    .hero {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 28px 24px;
+      margin-bottom: 28px;
+    }
+    h1 { margin: 0 0 8px; font-size: 28px; letter-spacing: -0.02em; }
+    .meta { color: var(--muted); font-size: 14px; }
+    article h2 {
+      font-size: 18px;
+      margin: 28px 0 10px;
+      padding-top: 8px;
+    }
+    article p, article li { color: #24332a; }
+    article ul { padding-left: 1.2em; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+      background: var(--card);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: var(--accent-soft); }
+    footer {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 20px 40px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .lang-en { display: none; }
+    html[lang="en"] .lang-zh { display: none; }
+    html[lang="en"] .lang-en { display: block; }
+    html[lang="en"] span.lang-en { display: inline; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="privacy.html">DailySave / 每日攒</a>
+      <nav>
+        <a href="privacy.html"><span class="lang-zh">隐私政策</span><span class="lang-en">Privacy</span></a>
+        <a href="terms.html"><span class="lang-zh">用户协议</span><span class="lang-en">Terms</span></a>
+        <button type="button" id="btn-zh" aria-pressed="true">中文</button>
+        <button type="button" id="btn-en" aria-pressed="false">EN</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1 class="lang-zh">隐私政策</h1>
+      <h1 class="lang-en">Privacy Policy</h1>
+      <p class="meta lang-zh">每日攒（DailySave）· 生效日期：2026 年 10 月 5 日</p>
+      <p class="meta lang-en">DailySave · Effective date: 5 October 2026</p>
+    </div>
+
+    <article class="lang-zh">
+      <p><strong>每日攒（DailySave）</strong> 由个人开发者 <strong>杨桐</strong>（下称「我们」）运营。本政策说明我们如何处理与本应用相关的信息。</p>
+
+      <h2>1. 我们不收集的内容</h2>
+      <p>我们<strong>不运营自建用户账号系统</strong>，也<strong>不通过自有服务器收集、存储或出售</strong>你的存钱记录、心愿清单或身份信息。本应用<strong>不连接银行或支付账户</strong>，不会读取短信、通讯录；不会在未使用系统文件选择器的情况下访问你的文件；<strong>不做广告追踪</strong>，不使用第三方统计分析 SDK。</p>
+
+      <h2>2. 本机保存的信息</h2>
+      <p>你在应用内输入或生成的数据默认保存在<strong>本设备</strong>，包括但不限于：</p>
+      <ul>
+        <li>存入/取出流水、余额与每日目标</li>
+        <li>心愿名称、金额、状态、图标等</li>
+        <li>提醒开关与时间、界面语言、主题/皮肤/图标偏好</li>
+        <li>完整版权益的本地缓存（以 Apple StoreKit 为准）</li>
+        <li>小组件/灵动岛所需的进度快照（经系统 App Group 与主应用共享，仍在你的设备上）</li>
+      </ul>
+      <p>卸载应用通常会删除本机数据。若你开启了 iCloud 同步，云端副本可能仍保留，见第 3 节。</p>
+
+      <h2>3. 可选的 iCloud 同步与备份文件</h2>
+      <p>若你购买完整版并开启 iCloud 同步，流水、心愿与相关设置会通过 <strong>Apple CloudKit 私有数据库</strong> 在你已登录的 Apple ID 设备间同步。该数据由 <strong>Apple</strong> 按其 iCloud/CloudKit 条款与隐私政策处理，我们无法在自有服务器上查看你的账本。</p>
+      <p>你也可以自行<strong>导出/导入</strong>备份文件。导入会<strong>整库替换</strong>本机数据。请自行保管备份文件；通过邮件、网盘等发出即离开本应用控制范围。</p>
+      <p>关闭同步后，本机数据仍保留，但不再与其他设备同步。</p>
+
+      <h2>4. 系统权限与系统服务</h2>
+      <p>仅在功能需要时请求，你可在系统设置中关闭：</p>
+      <table>
+        <thead><tr><th>能力</th><th>用途</th></tr></thead>
+        <tbody>
+          <tr><td>通知</td><td>可选的每日存钱提醒（本地通知，无远程推送）</td></tr>
+          <tr><td>Face ID / 设备密码</td><td>查看你设为隐藏的心愿；生物特征由系统处理，我们不采集、不上传人脸或指纹</td></tr>
+          <tr><td>网络</td><td>内购、恢复购买、iCloud 同步；核心记账可离线使用</td></tr>
+        </tbody>
+      </table>
+      <p>购买与收据校验由 <strong>Apple StoreKit / App Store</strong> 完成。我们不获知完整银行卡号。Apple 可能按自身规则处理交易与设备信息。</p>
+
+      <h2>5. 处理目的与法律依据</h2>
+      <p>本机数据由你创建，用于提供存钱习惯与心愿记录。开启 iCloud 或内购时，处理基于履行合同及正当利益（提供你选择的同步与外观权益）。你可随时关闭提醒、关闭同步或卸载应用。</p>
+
+      <h2>6. 保留与删除</h2>
+      <ul>
+        <li>本机：删除对应记录、关闭同步、卸载应用，或按系统方式清除 App 数据。</li>
+        <li>iCloud：在系统「设置 → [你的姓名] → iCloud」中管理；删除 iCloud 数据遵循 Apple 机制。</li>
+        <li>App Store 交易记录由 Apple 保留。</li>
+      </ul>
+
+      <h2>7. 儿童</h2>
+      <p>本应用不面向 13 周岁以下儿童（或你所在地更高年龄门槛）收集个人信息。若你认为儿童向我们提交了信息，请按下方联系方式告知，我们将配合处理本应用可控范围内的数据。</p>
+
+      <h2>8. 国际传输</h2>
+      <p>若开启 iCloud，数据可能存储于 Apple 在全球的基础设施。传输与保护措施以 Apple 政策为准。</p>
+
+      <h2>9. 你的权利</h2>
+      <p>在本应用可控范围内，你可通过应用内编辑/删除记录、导出备份、关闭同步或卸载应用来访问和删除数据。欧盟/英国等用户亦可按适用法律向监管机构投诉。涉及 Apple 账户、iCloud 或内购，请通过 Apple 支持行使权利。</p>
+
+      <h2>10. 政策更新</h2>
+      <p>更新后会修订本页日期；重大变更可能通过应用内或商店说明提示。继续使用视为已了解更新后的政策。</p>
+
+      <h2>11. 联系我们</h2>
+      <p>运营方：杨桐（个人开发者）<br>应用：每日攒 / DailySave（<code>cc.evolva.piggyjar</code>）<br>邮箱：<a href="mailto:onstcnkt27@gmail.com">onstcnkt27@gmail.com</a></p>
+    </article>
+
+    <article class="lang-en">
+      <p><strong>DailySave</strong> (“the App”) is operated by <strong>Yang Tong</strong> (“we”, “us”), an individual developer. This policy describes how information related to the App is handled.</p>
+
+      <h2>1. What we do not collect</h2>
+      <p>We do <strong>not</strong> run our own user accounts or backend that stores your ledger or wishes. We do <strong>not</strong> sell your data. The App does <strong>not</strong> connect to bank or payment accounts, and does <strong>not</strong> use advertising or third-party analytics SDKs. We do not read SMS or contacts, and we only access files you pick through the system file picker for backup import/export.</p>
+
+      <h2>2. Data stored on your device</h2>
+      <p>By default, content you enter is stored <strong>on device</strong>, including:</p>
+      <ul>
+        <li>Deposits, withdrawals, balance, and daily goals</li>
+        <li>Wish-list names, amounts, status, and icons</li>
+        <li>Reminder and language settings, theme / skin / icon preferences</li>
+        <li>A local cache of Full Unlock status (StoreKit is authoritative)</li>
+        <li>Widget and Live Activity snapshots shared via the system App Group—still on your devices</li>
+      </ul>
+      <p>Uninstalling the App typically deletes on-device data. iCloud copies may remain if sync was enabled (section 3).</p>
+
+      <h2>3. Optional iCloud sync and backup files</h2>
+      <p>If you purchase Full Unlock and enable iCloud sync, ledger, wishes, and related settings sync via <strong>Apple CloudKit private database</strong> under your Apple ID. <strong>Apple</strong> processes that data under its terms. We cannot read your ledger on our own servers.</p>
+      <p>You may <strong>export/import</strong> a backup file. Import <strong>replaces</strong> local data. You are responsible for files you share outside the App.</p>
+      <p>Turning sync off keeps local data but stops syncing to other devices.</p>
+
+      <h2>4. System permissions and services</h2>
+      <table>
+        <thead><tr><th>Feature</th><th>Purpose</th></tr></thead>
+        <tbody>
+          <tr><td>Notifications</td><td>Optional local daily reminders (no remote push)</td></tr>
+          <tr><td>Face ID / device passcode</td><td>Reveal wishes you hid; biometrics stay in the system—we do not collect or upload Face ID or fingerprints</td></tr>
+          <tr><td>Network</td><td>In-app purchase, restore, and iCloud sync; core bookkeeping works offline</td></tr>
+        </tbody>
+      </table>
+      <p>Purchases are processed by <strong>Apple StoreKit / the App Store</strong>. We do not receive full payment-card numbers.</p>
+
+      <h2>5. Purpose and legal bases</h2>
+      <p>On-device data is created by you to provide saving and wish features. iCloud and purchases are processed to perform the contract you request and for our legitimate interests in delivering those features. You may disable reminders or sync, or uninstall the App.</p>
+
+      <h2>6. Retention and deletion</h2>
+      <ul>
+        <li>On device: delete records in the App, disable sync, uninstall, or clear App data in system settings.</li>
+        <li>iCloud: manage under Apple ID settings; deletion follows Apple’s mechanisms.</li>
+        <li>App Store transaction records are retained by Apple.</li>
+      </ul>
+
+      <h2>7. Children</h2>
+      <p>The App is not directed at children under 13 (or a higher age required where you live). Contact us if you believe a child has provided information we control.</p>
+
+      <h2>8. International transfers</h2>
+      <p>If iCloud is on, data may reside on Apple’s global infrastructure, subject to Apple’s policies.</p>
+
+      <h2>9. Your rights</h2>
+      <p>You can access and delete data we control by editing records, exporting a backup, disabling sync, or uninstalling. You may lodge a complaint with a supervisory authority where applicable. For Apple ID, iCloud, or purchases, use Apple Support.</p>
+
+      <h2>10. Changes</h2>
+      <p>We will update the date on this page. Continued use after changes means you have been informed of the updated policy.</p>
+
+      <h2>11. Contact</h2>
+      <p>Operator: Yang Tong (individual developer)<br>App: DailySave (<code>cc.evolva.piggyjar</code>)<br>Email: <a href="mailto:onstcnkt27@gmail.com">onstcnkt27@gmail.com</a></p>
+    </article>
+  </main>
+
+  <footer>
+    <span class="lang-zh">本页为静态说明，不构成律师出具的法律意见。</span>
+    <span class="lang-en">This page is a static notice and is not legal advice.</span>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var btnZh = document.getElementById("btn-zh");
+      var btnEn = document.getElementById("btn-en");
+      function setLang(lang) {
+        root.lang = lang === "en" ? "en" : "zh-Hans";
+        btnZh.setAttribute("aria-pressed", lang !== "en");
+        btnEn.setAttribute("aria-pressed", lang === "en");
+        try { localStorage.setItem("pj-legal-lang", lang === "en" ? "en" : "zh"); } catch (e) {}
+        var url = new URL(window.location.href);
+        url.searchParams.set("lang", lang === "en" ? "en" : "zh");
+        history.replaceState(null, "", url);
+      }
+      btnZh.addEventListener("click", function () { setLang("zh"); });
+      btnEn.addEventListener("click", function () { setLang("en"); });
+      var q = new URLSearchParams(location.search).get("lang");
+      var saved = null;
+      try { saved = localStorage.getItem("pj-legal-lang"); } catch (e) {}
+      var start = (q === "en" || q === "zh") ? q : (saved === "en" || saved === "zh" ? saved : (navigator.language && navigator.language.indexOf("zh") === 0 ? "zh" : "en"));
+      setLang(start);
+    })();
+  </script>
+</body>
+</html>
