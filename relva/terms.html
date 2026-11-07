@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Relva Privacy Policy</title>
+  <style>
+    :root {
+      --canvas: #e4eee6;
+      --surface: #f7faf7;
+      --ink: #1f2a24;
+      --muted: #5a6b61;
+      --accent: #6f8c6c;
+      --line: rgba(31, 42, 36, 0.12);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
+        "Microsoft YaHei", "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse at 20% 0%, rgba(111, 140, 108, 0.18), transparent 50%),
+        radial-gradient(ellipse at 90% 10%, rgba(228, 238, 230, 0.9), transparent 45%),
+        var(--canvas);
+      line-height: 1.7;
+    }
+    main { max-width: 720px; margin: 0 auto; padding: 40px 20px 72px; }
+    .toolbar { display: flex; justify-content: flex-end; margin-bottom: 12px; }
+    .toolbar select {
+      appearance: none;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font: inherit;
+      font-size: 0.9rem;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 28px 24px;
+      box-shadow: 0 10px 30px rgba(31, 42, 36, 0.06);
+    }
+    h1 { margin: 0 0 8px; font-size: 1.75rem; letter-spacing: 0.02em; }
+    .meta { margin: 0 0 28px; color: var(--muted); font-size: 0.92rem; }
+    h2 { margin: 28px 0 10px; font-size: 1.15rem; color: var(--accent); }
+    p, li { font-size: 0.98rem; }
+    p { margin: 0 0 12px; }
+    ul { margin: 0 0 12px; padding-left: 1.2em; }
+    li { margin-bottom: 6px; }
+    a { color: var(--accent); }
+    .visually-hidden {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0); border: 0;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="toolbar">
+      <label>
+        <span class="visually-hidden" id="lang-label">Language</span>
+        <select id="lang" aria-labelledby="lang-label"></select>
+      </label>
+    </div>
+    <article class="card" id="content"></article>
+  </main>
+  <script>
+    const EMAIL = "onstcnkt27@gmail.com";
+    const TERMS = "./terms.html";
+    const LANGS = [
+      { id: "zh-Hans", label: "简体中文" },
+      { id: "zh-Hant", label: "繁體中文" },
+      { id: "en", label: "English" },
+      { id: "ja", label: "日本語" },
+      { id: "es", label: "Español" },
+      { id: "de", label: "Deutsch" },
+      { id: "fr", label: "Français" },
+      { id: "pt-BR", label: "Português (Brasil)" }
+    ];
+
+    const T = {
+      "zh-Hans": {
+        title: "Relva 隐私政策",
+        docTitle: "Relva 隐私政策",
+        meta: "生效日期：2026 年 11 月 7 日 · 适用于 iOS 应用 Relva",
+        intro: "Relva（以下简称「本应用」）重视你的隐私。本政策说明我们如何处理与本应用相关的信息。使用本应用即表示你已了解本政策内容。",
+        h1: "1. 我们收集哪些信息",
+        p1: "本应用以「本地优先」为原则，尽量少收集数据。",
+        l1: [
+          "设备本地业务数据：如场景配置、计时器会话记录、拦截相关日志、统计汇总、通知偏好、会员状态缓存等。这些数据默认保存在你的设备本地（含 App 所需的 App Group 共享区域），用于提供核心功能与展示。",
+          "系统权限相关信息：当你授权「屏幕使用时间 / Family Controls」等能力时，系统会按 Apple 规则处理应用选择与限制配置。Relva 使用这些能力实现拦截与防护，不会把你的应用使用明细上传到 Relva 自有服务器做画像。",
+          "购买信息：内购由 Apple 处理。我们仅在设备侧通过 StoreKit 读取购买/恢复结果，用于解锁功能，不另行收集银行卡号等支付敏感信息。",
+          "你主动提供的信息：若你通过邮件或反馈渠道联系我们，我们会收到你留下的邮箱与邮件内容，仅用于回复与处理问题。"
+        ],
+        p1b: "本应用当前不强制注册账号，也不以上传专注统计 / 会话记录到公司服务器作为产品默认能力。",
+        h2: "2. 我们如何使用信息",
+        l2: ["提供、维护与改进专注防护、场景、计时器、统计等功能；","在本机展示历史与趋势（默认不上云同步）；","处理会员权益校验与恢复购买；","响应你的反馈与支持请求；","满足适用法律法规要求。"],
+        h3: "3. 信息共享",
+        p3: "我们不会出售你的个人信息。仅在下列情况下可能发生必要共享：",
+        l3: ["Apple：系统权限、App Store、StoreKit、推送与设备能力由 Apple 提供并按其政策处理；","法律要求：在法律法规、监管或合法程序要求时；","你的明确指示：例如你主动发送邮件反馈。"],
+        h4: "4. 存储与安全",
+        l4: ["核心使用数据默认存储于本机；卸载应用通常意味着本地业务数据被清除，且无法跨设备自动恢复。","我们采取合理的技术与管理措施保护信息安全，但互联网与设备环境无法保证绝对安全。","如未来上线云同步或账号体系，将另行更新本政策并说明新增数据类型与用途。"],
+        h5: "5. 通知",
+        p5: "在你授权后，本应用可能发送本地通知（例如计时结束、场景即将开始、额度相关提醒等）。你可在系统设置或应用内通知开关中关闭。",
+        h6: "6. 儿童隐私",
+        p6: "本应用不以儿童为主要服务对象。若监护人认为儿童向我们提供了个人信息，请联系我们，我们将在合理范围内协助处理。",
+        h7: "7. 你的选择",
+        l7: ["可在系统设置中撤销屏幕使用时间等授权；","可关闭通知；","可停止使用并卸载本应用以清除本地数据；","可通过邮件联系我们提出疑问或请求。"],
+        h8: "8. 政策更新",
+        p8: "我们可能更新本政策。更新后会在本页面调整生效日期。若更新涉及重大变化，我们将尽量通过应用内提示或其他合理方式告知。",
+        h9: "9. 联系我们",
+        p9a: "关于隐私问题，请通过应用内「我的 → 关于与反馈」联系，或发送邮件至：",
+        p9b: "用户协议见：",
+        p9c: "《Relva 用户协议》"
+      },
+      "zh-Hant": {
+        title: "Relva 隱私權政策",
+        docTitle: "Relva 隱私權政策",
+        meta: "生效日期：2026 年 11 月 7 日 · 適用於 iOS 應用程式 Relva",
+        intro: "Relva（以下簡稱「本應用」）重視你的隱私。本政策說明我們如何處理與本應用相關的資訊。使用本應用即表示你已了解本政策內容。",
+        h1: "1. 我們收集哪些資訊",
+        p1: "本應用以「本機優先」為原則，盡量少收集資料。",
+        l1: [
+          "裝置本機業務資料：如場景設定、計時器工作階段紀錄、攔截相關日誌、統計彙總、通知偏好、會員狀態快取等。這些資料預設保存在你的裝置本機（含 App 所需的 App Group 共享區域），用於提供核心功能與展示。",
+          "系統權限相關資訊：當你授權「螢幕使用時間 / Family Controls」等能力時，系統會依 Apple 規則處理應用程式選擇與限制設定。Relva 使用這些能力實現攔截與防護，不會把你的應用程式使用明細上傳到 Relva 自有伺服器做畫像。",
+          "購買資訊：內購由 Apple 處理。我們僅在裝置端透過 StoreKit 讀取購買／回復結果，用於解鎖功能，不另行收集銀行卡號等支付敏感資訊。",
+          "你主動提供的資訊：若你透過郵件或回饋管道聯絡我們，我們會收到你留下的信箱與郵件內容，僅用於回覆與處理問題。"
+        ],
+        p1b: "本應用目前不強制註冊帳號，也不以上傳專注統計／工作階段紀錄到公司伺服器作為產品預設能力。",
+        h2: "2. 我們如何使用資訊",
+        l2: ["提供、維護與改進專注防護、場景、計時器、統計等功能；","在本機展示歷史與趨勢（預設不上雲同步）；","處理會員權益核對與回復購買；","回應你的回饋與支援請求；","滿足適用法律法規要求。"],
+        h3: "3. 資訊共享",
+        p3: "我們不會出售你的個人資訊。僅在下列情況下可能發生必要共享：",
+        l3: ["Apple：系統權限、App Store、StoreKit、推播與裝置能力由 Apple 提供並依其政策處理；","法律要求：在法律法規、監管或合法程序要求時；","你的明確指示：例如你主動寄送郵件回饋。"],
+        h4: "4. 儲存與安全",
+        l4: ["核心使用資料預設儲存於本機；解除安裝應用程式通常意味著本機業務資料被清除，且無法跨裝置自動回復。","我們採取合理的技術與管理措施保護資訊安全，但網際網路與裝置環境無法保證絕對安全。","如未來上線雲端同步或帳號體系，將另行更新本政策並說明新增資料類型與用途。"],
+        h5: "5. 通知",
+        p5: "在你授權後，本應用可能傳送本機通知（例如計時結束、場景即將開始、額度相關提醒等）。你可在系統設定或應用內通知開關中關閉。",
+        h6: "6. 兒童隱私",
+        p6: "本應用不以兒童為主要服務對象。若監護人認為兒童向我們提供了個人資訊，請聯絡我們，我們將在合理範圍內協助處理。",
+        h7: "7. 你的選擇",
+        l7: ["可在系統設定中撤銷螢幕使用時間等授權；","可關閉通知；","可停止使用並解除安裝本應用以清除本機資料；","可透過郵件聯絡我們提出疑問或請求。"],
+        h8: "8. 政策更新",
+        p8: "我們可能更新本政策。更新後會在本頁面調整生效日期。若更新涉及重大變化，我們將盡量透過應用內提示或其他合理方式告知。",
+        h9: "9. 聯絡我們",
+        p9a: "關於隱私問題，請透過應用內「我的 → 關於與回饋」聯絡，或寄送郵件至：",
+        p9b: "使用者條款見：",
+        p9c: "《Relva 使用者條款》"
+      },
+      en: {
+        title: "Relva Privacy Policy",
+        docTitle: "Relva Privacy Policy",
+        meta: "Effective: November 7, 2026 · For the Relva iOS app",
+        intro: "Relva (“the App”) respects your privacy. This Policy explains how we handle information related to the App. Using the App means you understand this Policy.",
+        h1: "1. Information we collect",
+        p1: "The App is local-first and collects as little as practical.",
+        l1: [
+          "On-device product data: scene settings, timer session records, blocking-related logs, stats summaries, notification preferences, membership cache, and similar. These stay on your device by default (including App Group storage the App needs) to power features and display.",
+          "System permission–related information: when you authorize Screen Time / Family Controls, Apple handles app selection and limits under its rules. Relva uses these capabilities for blocking and protection and does not upload your detailed app-usage data to Relva servers for profiling.",
+          "Purchase information: In-app purchases are handled by Apple. We only read purchase/restore results via StoreKit on device to unlock features. We do not separately collect card numbers or other payment secrets.",
+          "Information you send us: if you email or contact support, we receive your address and message content only to reply and resolve issues."
+        ],
+        p1b: "The App does not require an account today, and uploading focus stats / session records to company servers is not a default product capability.",
+        h2: "2. How we use information",
+        l2: ["Provide, maintain, and improve focus protection, scenes, timers, and stats;","Show history and trends on device (no cloud sync by default);","Validate membership and restore purchases;","Respond to feedback and support;","Meet applicable legal requirements."],
+        h3: "3. Sharing",
+        p3: "We do not sell your personal information. Necessary sharing may occur only when:",
+        l3: ["Apple: system permissions, App Store, StoreKit, notifications, and device capabilities are provided by Apple under its policies;","Legal requirements: when required by law, regulation, or lawful process;","Your direction: for example when you email us feedback."],
+        h4: "4. Storage and security",
+        l4: ["Core usage data stays on device by default; uninstalling usually clears local product data and it will not auto-restore across devices.","We use reasonable technical and organizational measures, but no environment is perfectly secure.","If we later add cloud sync or accounts, we will update this Policy and describe new data types and purposes."],
+        h5: "5. Notifications",
+        p5: "With your permission, the App may send local notifications (e.g. timer end, upcoming scene, limit reminders). You can turn them off in system settings or in-app toggles.",
+        h6: "6. Children",
+        p6: "The App is not directed primarily at children. If a guardian believes a child provided personal information, contact us and we will help as reasonably possible.",
+        h7: "7. Your choices",
+        l7: ["Revoke Screen Time and related authorizations in system settings;","Disable notifications;","Stop using and uninstall the App to clear local data;","Email us with questions or requests."],
+        h8: "8. Policy updates",
+        p8: "We may update this Policy and will adjust the effective date here. For material changes, we will try to notify you in-app or by other reasonable means.",
+        h9: "9. Contact",
+        p9a: "Privacy questions: Me → About & Feedback in the App, or email:",
+        p9b: "Terms of Use:",
+        p9c: "Relva Terms of Use"
+      },
+      ja: {
+        title: "Relva プライバシーポリシー",
+        docTitle: "Relva プライバシーポリシー",
+        meta: "施行日：2026年11月7日 · iOSアプリ Relva 向け",
+        intro: "Relva（以下「本アプリ」）はプライバシーを重視します。本ポリシーは本アプリに関連する情報の取り扱いを説明します。ご利用により本内容をご理解いただいたものとします。",
+        h1: "1. 収集する情報",
+        p1: "本アプリは端末内優先で、必要最小限の収集に努めます。",
+        l1: [
+          "端末内の業務データ：シーン設定、タイマー記録、ブロック関連ログ、統計、通知設定、メンバーシップキャッシュ等。既定では端末内（必要な App Group 含む）に保存し、機能提供と表示に使います。",
+          "システム許可関連：スクリーンタイム / Family Controls 等を許可すると、Apple のルールに従い選択と制限が処理されます。Relva はブロック／保護のために用い、詳細な利用履歴を Relva 独自サーバーへ送ってプロファイリングしません。",
+          "購入情報：アプリ内課金は Apple が処理します。端末上で StoreKit の購入／復元結果のみ読み取り機能解除に使い、カード番号等は別途収集しません。",
+          "ご連絡情報：メール等で問い合わせた場合、返信対応のためメールアドレスと内容を受け取ります。"
+        ],
+        p1b: "現時点でアカウント登録は必須ではなく、集中統計／セッション記録を会社サーバーへアップロードする既定機能はありません。",
+        h2: "2. 利用目的",
+        l2: ["集中保護・シーン・タイマー・統計の提供と改善","端末内での履歴・傾向表示（既定でクラウド同期なし）","メンバーシップ検証と購入復元","フィードバック・サポート対応","適用法令の遵守"],
+        h3: "3. 共有",
+        p3: "個人情報を販売しません。必要な共有は次の場合に限ります。",
+        l3: ["Apple：権限、App Store、StoreKit、通知、端末機能は Apple の方針に従う","法令：法令・規制・正当な手続きで求められる場合","ご本人の指示：フィードバックメール送信など"],
+        h4: "4. 保存と安全",
+        l4: ["主要データは既定で端末内。アンインストールで本機データは通常消去され、端末間の自動復元はありません。","合理的な安全管理を行いますが、完全な安全性は保証できません。","将来クラウド同期やアカウントを導入する場合、本ポリシーを更新しデータ種別と目的を明示します。"],
+        h5: "5. 通知",
+        p5: "許可後、タイマー終了・シーン開始前・上限関連などのローカル通知を送る場合があります。システム設定またはアプリ内スイッチでオフにできます。",
+        h6: "6. 子どものプライバシー",
+        p6: "本アプリは子どもを主な対象としません。保護者が子どもの個人情報が提供されたと考える場合はご連絡ください。合理的な範囲で対応します。",
+        h7: "7. お客様の選択",
+        l7: ["システム設定でスクリーンタイム等の許可を取り消す","通知をオフにする","利用停止・アンインストールで本機データを消去する","メールで問い合わせる"],
+        h8: "8. ポリシー更新",
+        p8: "本ポリシーを更新することがあります。施行日は本ページで更新します。重要な変更はアプリ内等で可能な限りお知らせします。",
+        h9: "9. お問い合わせ",
+        p9a: "プライバシーに関するお問い合わせは、アプリ内「マイページ → バージョン情報とフィードバック」、またはメール：",
+        p9b: "利用規約：",
+        p9c: "Relva 利用規約"
+      },
+      es: {
+        title: "Política de privacidad de Relva",
+        docTitle: "Política de privacidad de Relva",
+        meta: "Vigente: 7 de noviembre de 2026 · App iOS Relva",
+        intro: "Relva («la App») respeta tu privacidad. Esta Política explica cómo tratamos la información relacionada con la App. Usarla implica que comprendes esta Política.",
+        h1: "1. Información que recopilamos",
+        p1: "La App prioriza lo local y recoge lo mínimo práctico.",
+        l1: [
+          "Datos del producto en el dispositivo: escenas, sesiones del temporizador, registros de bloqueo, resúmenes, preferencias de notificación, caché de membresía, etc. Permanecen en el dispositivo por defecto (incluido App Group) para funciones y visualización.",
+          "Información de permisos del sistema: al autorizar Screen Time / Family Controls, Apple gestiona selección y límites. Relva usa esas capacidades para bloquear y proteger y no sube tu uso detallado a servidores propios para perfilar.",
+          "Compras: las gestiona Apple. Solo leemos resultados de compra/restauración con StoreKit en el dispositivo. No recogemos números de tarjeta u otros secretos de pago por separado.",
+          "Lo que nos envías: si escribes por correo, recibimos tu dirección y mensaje solo para responder."
+        ],
+        p1b: "Hoy no se exige cuenta, y subir estadísticas/sesiones a servidores de la empresa no es una capacidad por defecto.",
+        h2: "2. Uso de la información",
+        l2: ["Prestar, mantener y mejorar protección de foco, escenas, temporizadores y estadísticas;","Mostrar historial y tendencias en el dispositivo (sin sync en la nube por defecto);","Validar membresía y restaurar compras;","Responder a comentarios y soporte;","Cumplir requisitos legales aplicables."],
+        h3: "3. Compartir",
+        p3: "No vendemos tu información personal. Solo puede haber uso compartido necesario cuando:",
+        l3: ["Apple: permisos, App Store, StoreKit, notificaciones y capacidades del dispositivo bajo sus políticas;","Requisitos legales: ley, regulación o proceso lícito;","Tu indicación: p. ej. cuando envías feedback por correo."],
+        h4: "4. Almacenamiento y seguridad",
+        l4: ["Los datos de uso principales quedan en el dispositivo; desinstalar suele borrarlos y no se restauran solos entre dispositivos.","Aplicamos medidas razonables, pero ningún entorno es perfectamente seguro.","Si añadimos sync en la nube o cuentas, actualizaremos esta Política."],
+        h5: "5. Notificaciones",
+        p5: "Con tu permiso, la App puede enviar notificaciones locales (fin de temporizador, escena próxima, límites, etc.). Puedes desactivarlas en Ajustes o en la app.",
+        h6: "6. Menores",
+        p6: "La App no está dirigida principalmente a menores. Si un tutor cree que un menor nos dio datos personales, contáctanos y ayudaremos en la medida razonable.",
+        h7: "7. Tus opciones",
+        l7: ["Revocar Screen Time y autorizaciones en Ajustes;","Desactivar notificaciones;","Dejar de usar y desinstalar para borrar datos locales;","Escribirnos con preguntas o solicitudes."],
+        h8: "8. Actualizaciones",
+        p8: "Podemos actualizar esta Política y cambiaremos la fecha aquí. En cambios materiales intentaremos avisarte en la app u otros medios razonables.",
+        h9: "9. Contacto",
+        p9a: "Privacidad: Yo → Acerca y comentarios, o correo:",
+        p9b: "Términos de uso:",
+        p9c: "Términos de uso de Relva"
+      },
+      de: {
+        title: "Relva-Datenschutzerklärung",
+        docTitle: "Relva-Datenschutzerklärung",
+        meta: "Gültig ab: 7. November 2026 · Für die iOS-App Relva",
+        intro: "Relva („die App“) respektiert deine Privatsphäre. Diese Erklärung beschreibt den Umgang mit appbezogenen Informationen. Die Nutzung bedeutet, dass du sie verstehst.",
+        h1: "1. Welche Daten wir erheben",
+        p1: "Die App ist lokal zuerst und erhebt so wenig wie praktisch.",
+        l1: [
+          "Produktdaten auf dem Gerät: Szenen, Timer-Sitzungen, Blockierprotokolle, Statistik, Benachrichtigungseinstellungen, Mitgliedschafts-Cache usw. Standardmäßig auf dem Gerät (inkl. App Group) für Funktionen und Anzeige.",
+          "Systemberechtigungen: Bei Screen Time / Family Controls verarbeitet Apple Auswahl und Limits. Relva nutzt das für Blockieren/Schutz und lädt keine detaillierten Nutzungsdaten auf Relva-Server zum Profiling hoch.",
+          "Käufe: In-App-Käufe über Apple. Wir lesen nur Kauf-/Wiederherstellungsergebnisse via StoreKit auf dem Gerät. Keine separaten Kartendaten.",
+          "Von dir gesendete Infos: Bei E-Mail-Kontakt erhalten wir Adresse und Inhalt nur zur Antwort."
+        ],
+        p1b: "Kein Konto erforderlich; das Hochladen von Fokusstatistik/Sitzungen auf Firmenserver ist keine Standardfunktion.",
+        h2: "2. Verwendung",
+        l2: ["Bereitstellen und Verbessern von Fokus-Schutz, Szenen, Timern und Statistik;","Verlauf/Trends auf dem Gerät zeigen (standardmäßig kein Cloud-Sync);","Mitgliedschaft prüfen und Käufe wiederherstellen;","Feedback und Support;","Rechtliche Pflichten erfüllen."],
+        h3: "3. Weitergabe",
+        p3: "Wir verkaufen keine personenbezogenen Daten. Notwendige Weitergabe nur wenn:",
+        l3: ["Apple: Berechtigungen, App Store, StoreKit, Mitteilungen, Gerätefunktionen nach Apple-Richtlinien;","Rechtliche Anforderungen;","Deine Anweisung, z. B. Feedback-Mail."],
+        h4: "4. Speicherung und Sicherheit",
+        l4: ["Kerndaten standardmäßig lokal; Deinstallation löscht sie meist, ohne Auto-Wiederherstellung geräteübergreifend.","Wir treffen angemessene Maßnahmen, absolute Sicherheit gibt es nicht.","Bei Cloud-Sync oder Konten aktualisieren wir diese Erklärung."],
+        h5: "5. Mitteilungen",
+        p5: "Mit Erlaubnis können lokale Mitteilungen gesendet werden (Timer-Ende, bevorstehende Szene, Limit-Hinweise). Abschalten in Systemeinstellungen oder in der App.",
+        h6: "6. Kinder",
+        p6: "Die App richtet sich nicht primär an Kinder. Wenn ein Erziehungsberechtigter meint, ein Kind habe Daten übermittelt, kontaktiere uns – wir helfen im zumutbaren Rahmen.",
+        h7: "7. Deine Wahl",
+        l7: ["Screen Time u. a. in den Einstellungen widerrufen;","Mitteilungen aus;","Nutzung beenden und deinstallieren;","Uns per E-Mail kontaktieren."],
+        h8: "8. Aktualisierungen",
+        p8: "Wir können diese Erklärung aktualisieren und das Datum hier anpassen. Bei wesentlichen Änderungen versuchen wir, dich in der App oder anders angemessen zu informieren.",
+        h9: "9. Kontakt",
+        p9a: "Datenschutz: Ich → Info & Feedback, oder E-Mail:",
+        p9b: "Nutzungsbedingungen:",
+        p9c: "Relva Nutzungsbedingungen"
+      },
+      fr: {
+        title: "Politique de confidentialité Relva",
+        docTitle: "Politique de confidentialité Relva",
+        meta: "En vigueur : 7 novembre 2026 · Application iOS Relva",
+        intro: "Relva (« l’App ») respecte votre vie privée. Cette Politique explique le traitement des informations liées à l’App. L’utiliser signifie que vous en comprenez le contenu.",
+        h1: "1. Informations collectées",
+        p1: "L’App privilégie le local et collecte le minimum pratique.",
+        l1: [
+          "Données produit sur l’appareil : scènes, sessions minuteur, journaux de blocage, stats, préférences de notification, cache d’abonnement, etc. Par défaut sur l’appareil (y compris App Group) pour les fonctions et l’affichage.",
+          "Autorisations système : avec Screen Time / Family Controls, Apple gère sélection et limites. Relva s’en sert pour bloquer/protéger et n’envoie pas vos usages détaillés sur des serveurs Relva pour profilage.",
+          "Achats : gérés par Apple. Nous lisons seulement les résultats d’achat/restauration via StoreKit sur l’appareil. Pas de numéros de carte séparés.",
+          "Informations que vous envoyez : en cas d’e-mail, nous recevons adresse et message uniquement pour répondre."
+        ],
+        p1b: "Aucun compte requis aujourd’hui ; l’envoi de stats/sessions vers des serveurs d’entreprise n’est pas une capacité par défaut.",
+        h2: "2. Utilisation",
+        l2: ["Fournir et améliorer protection du focus, scènes, minuteries et stats ;","Afficher historique et tendances sur l’appareil (pas de sync cloud par défaut) ;","Valider l’abonnement et restaurer les achats ;","Répondre aux retours et au support ;","Respecter les obligations légales."],
+        h3: "3. Partage",
+        p3: "Nous ne vendons pas vos données personnelles. Partage nécessaire uniquement si :",
+        l3: ["Apple : autorisations, App Store, StoreKit, notifications, capacités appareil selon ses règles ;","Exigences légales ;","Votre instruction, p. ex. e-mail de feedback."],
+        h4: "4. Stockage et sécurité",
+        l4: ["Données d’usage principales sur l’appareil ; la désinstallation les efface en général, sans restauration auto entre appareils.","Mesures raisonnables ; aucune sécurité absolue.","Si sync cloud ou comptes plus tard, nous mettrons à jour cette Politique."],
+        h5: "5. Notifications",
+        p5: "Avec votre accord, notifications locales possibles (fin de minuteur, scène à venir, limites). Désactivation dans Réglages ou dans l’app.",
+        h6: "6. Enfants",
+        p6: "L’App ne cible pas principalement les enfants. Si un tuteur pense qu’un enfant a fourni des données, contactez-nous ; nous aiderons dans une mesure raisonnable.",
+        h7: "7. Vos choix",
+        l7: ["Révoquer Screen Time etc. dans Réglages ;","Désactiver les notifications ;","Arrêter l’usage et désinstaller ;","Nous écrire."],
+        h8: "8. Mises à jour",
+        p8: "Nous pouvons mettre à jour cette Politique et la date ici. Pour des changements matériels, nous tenterons de vous informer dans l’app ou autrement.",
+        h9: "9. Contact",
+        p9a: "Confidentialité : Moi → À propos et commentaires, ou e-mail :",
+        p9b: "Conditions d’utilisation :",
+        p9c: "Conditions d’utilisation Relva"
+      },
+      "pt-BR": {
+        title: "Política de Privacidade do Relva",
+        docTitle: "Política de Privacidade do Relva",
+        meta: "Vigência: 7 de novembro de 2026 · App iOS Relva",
+        intro: "O Relva (“o App”) respeita sua privacidade. Esta Política explica como tratamos informações relacionadas ao App. Usá-lo significa que você entende esta Política.",
+        h1: "1. Informações que coletamos",
+        p1: "O App é local-first e coleta o mínimo prático.",
+        l1: [
+          "Dados do produto no dispositivo: cenas, sessões do timer, logs de bloqueio, estatísticas, preferências de notificação, cache de assinatura etc. Ficam no dispositivo por padrão (incluindo App Group) para recursos e exibição.",
+          "Permissões do sistema: ao autorizar Screen Time / Family Controls, a Apple trata seleção e limites. O Relva usa isso para bloquear/proteger e não envia seu uso detalhado a servidores próprios para perfilamento.",
+          "Compras: tratadas pela Apple. Lemos só resultados de compra/restauração via StoreKit no dispositivo. Não coletamos número de cartão separadamente.",
+          "O que você envia: se escrever por e-mail, recebemos endereço e mensagem só para responder."
+        ],
+        p1b: "Conta não é obrigatória hoje; enviar estatísticas/sessões a servidores da empresa não é capacidade padrão.",
+        h2: "2. Como usamos",
+        l2: ["Fornecer e melhorar proteção de foco, cenas, timers e estatísticas;","Mostrar histórico e tendências no dispositivo (sem sync na nuvem por padrão);","Validar assinatura e restaurar compras;","Responder a feedback e suporte;","Cumprir requisitos legais."],
+        h3: "3. Compartilhamento",
+        p3: "Não vendemos suas informações pessoais. Compartilhamento necessário só quando:",
+        l3: ["Apple: permissões, App Store, StoreKit, notificações e recursos do dispositivo sob suas políticas;","Exigências legais;","Sua indicação, p.ex. e-mail de feedback."],
+        h4: "4. Armazenamento e segurança",
+        l4: ["Dados principais no dispositivo; desinstalar costuma apagá-los sem restauração automática entre aparelhos.","Medidas razoáveis; nenhum ambiente é perfeitamente seguro.","Se houver sync na nuvem ou contas, atualizaremos esta Política."],
+        h5: "5. Notificações",
+        p5: "Com permissão, o App pode enviar notificações locais (fim do timer, cena próxima, limites). Desative em Ajustes ou no app.",
+        h6: "6. Crianças",
+        p6: "O App não é direcionado principalmente a crianças. Se um responsável achar que uma criança enviou dados, contate-nos; ajudaremos na medida razoável.",
+        h7: "7. Suas escolhas",
+        l7: ["Revogar Screen Time etc. em Ajustes;","Desativar notificações;","Parar de usar e desinstalar;","Escrever-nos."],
+        h8: "8. Atualizações",
+        p8: "Podemos atualizar esta Política e a data aqui. Em mudanças materiais, tentaremos avisar no app ou por outro meio razoável.",
+        h9: "9. Contato",
+        p9a: "Privacidade: Eu → Sobre e feedback, ou e-mail:",
+        p9b: "Termos de uso:",
+        p9c: "Termos de uso do Relva"
+      }
+    };
+
+    function escapeHtml(s) {
+      return String(s)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function list(items) {
+      return "<ul>" + items.map((x) => "<li>" + escapeHtml(x) + "</li>").join("") + "</ul>";
+    }
+
+    function render(lang) {
+      const t = T[lang] || T.en;
+      document.documentElement.lang = lang;
+      document.title = t.docTitle;
+      const mail = "mailto:" + EMAIL;
+      const termsHref = TERMS + "?lang=" + encodeURIComponent(lang);
+      document.getElementById("content").innerHTML =
+        "<h1>" + escapeHtml(t.title) + "</h1>" +
+        "<p class=\"meta\">" + escapeHtml(t.meta) + "</p>" +
+        "<p>" + escapeHtml(t.intro) + "</p>" +
+        "<h2>" + escapeHtml(t.h1) + "</h2>" +
+        "<p>" + escapeHtml(t.p1) + "</p>" +
+        list(t.l1) +
+        "<p>" + escapeHtml(t.p1b) + "</p>" +
+        "<h2>" + escapeHtml(t.h2) + "</h2>" +
+        list(t.l2) +
+        "<h2>" + escapeHtml(t.h3) + "</h2>" +
+        "<p>" + escapeHtml(t.p3) + "</p>" +
+        list(t.l3) +
+        "<h2>" + escapeHtml(t.h4) + "</h2>" +
+        list(t.l4) +
+        "<h2>" + escapeHtml(t.h5) + "</h2>" +
+        "<p>" + escapeHtml(t.p5) + "</p>" +
+        "<h2>" + escapeHtml(t.h6) + "</h2>" +
+        "<p>" + escapeHtml(t.p6) + "</p>" +
+        "<h2>" + escapeHtml(t.h7) + "</h2>" +
+        list(t.l7) +
+        "<h2>" + escapeHtml(t.h8) + "</h2>" +
+        "<p>" + escapeHtml(t.p8) + "</p>" +
+        "<h2>" + escapeHtml(t.h9) + "</h2>" +
+        "<p>" + escapeHtml(t.p9a) +
+          " <a href=\"" + mail + "\">" + escapeHtml(EMAIL) + "</a></p>" +
+        "<p>" + escapeHtml(t.p9b) +
+          " <a href=\"" + termsHref + "\">" + escapeHtml(t.p9c) + "</a></p>";
+    }
+
+    function resolveLang() {
+      const params = new URLSearchParams(location.search);
+      const q = params.get("lang");
+      if (q && T[q]) return q;
+      try {
+        const saved = localStorage.getItem("relva.legal.lang");
+        if (saved && T[saved]) return saved;
+      } catch (_) {}
+      const nav = (navigator.languages && navigator.languages[0]) || navigator.language || "en";
+      const lower = String(nav).toLowerCase();
+      if (lower.startsWith("zh-hant") || lower.startsWith("zh-tw") || lower.startsWith("zh-hk") || lower.startsWith("zh-mo")) return "zh-Hant";
+      if (lower.startsWith("zh")) return "zh-Hans";
+      if (lower.startsWith("ja")) return "ja";
+      if (lower.startsWith("es")) return "es";
+      if (lower.startsWith("de")) return "de";
+      if (lower.startsWith("fr")) return "fr";
+      if (lower.startsWith("pt")) return "pt-BR";
+      if (lower.startsWith("en")) return "en";
+      return "en";
+    }
+
+    function setLang(lang) {
+      try { localStorage.setItem("relva.legal.lang", lang); } catch (_) {}
+      const url = new URL(location.href);
+      url.searchParams.set("lang", lang);
+      history.replaceState(null, "", url);
+      render(lang);
+    }
+
+    const select = document.getElementById("lang");
+    LANGS.forEach((l) => {
+      const opt = document.createElement("option");
+      opt.value = l.id;
+      opt.textContent = l.label;
+      select.appendChild(opt);
+    });
+    const initial = resolveLang();
+    select.value = initial;
+    setLang(initial);
+    select.addEventListener("change", () => setLang(select.value));
+  </script>
+</body>
+</html>
